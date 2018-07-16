@@ -1,0 +1,3 @@
+
+ module_checkout_confirmation_information_title = Do you want to display in the summary the order process evolution?
+ module_pprocess_confirmation_information_description = Display a banner

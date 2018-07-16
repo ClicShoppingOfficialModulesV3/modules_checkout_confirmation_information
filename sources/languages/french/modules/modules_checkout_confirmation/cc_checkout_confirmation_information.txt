@@ -1,0 +1,3 @@
+module_checkout_confirmation_information_title = Souhaitez-vous afficher dans le récapitulatif de commande  l'évolution du processus de commande ?
+module_checkout_confirmation_information_description = Affiche dans le récapitulatif de commande l'évolution du processus de commande
+

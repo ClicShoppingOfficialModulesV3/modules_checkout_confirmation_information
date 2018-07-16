@@ -15,7 +15,7 @@
   "type_module":        "template",
   "dependance":         "",
   "description":        "Allow to display a message inside checkout confirmation via the banner",
-  "image":              "ModuleInfosJson/bootstrap_caroussel.png",
+  "image":              "",
 
   "authors": [
     {

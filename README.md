@@ -28,4 +28,7 @@ Implementation:
 
 - Install the module 
 - Activate the module Design / order Process / Checkout Confirmation
+- Copy the modules_checkout_confirmation_information.json into ClicShopping/Work/Cache/Github (manual installation)
+
+
 

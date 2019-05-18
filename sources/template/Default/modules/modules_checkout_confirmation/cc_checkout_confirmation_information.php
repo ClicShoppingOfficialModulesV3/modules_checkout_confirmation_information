@@ -43,6 +43,7 @@
       if (isset($_GET['Checkout']) && isset($_GET['Confirmation']) && $CLICSHOPPING_Customer->isLoggedOn() ) {
 
         $content_width = (int)MODULE_CHECKOUT_CONFIRMATION_INFORMATION_CONTENT_WIDTH;
+        $confirmation_process_order_banner = '';
 
         if ($CLICSHOPPING_Service->isStarted('Banner') ) {
           if ($banner = $CLICSHOPPING_Banner->bannerExists('dynamic',  MODULE_CHECKOUT_CONFIRMATION_INFORMATION_BANNER_GROUP)) {

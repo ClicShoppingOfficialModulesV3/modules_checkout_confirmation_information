@@ -15,10 +15,10 @@
   class cc_checkout_confirmation_information {
     public $code;
     public $group;
-    public $title;
-    public $description;
-    public $sort_order;
-    public $enabled = false;
+    public string $title;
+    public string $description;
+    public ?int $sort_order = 0;
+    public bool $enabled = false;
 
     public function __construct() {
       $this->code = get_class($this);
@@ -40,18 +40,18 @@
       $CLICSHOPPING_Service = Registry::get('Service');
       $CLICSHOPPING_Banner = Registry::get('Banner');
 
-      if (isset($_GET['Checkout']) && isset($_GET['Confirmation']) && $CLICSHOPPING_Customer->isLoggedOn() ) {
+      if (isset($_GET['Checkout']) && isset($_GET['Confirmation']) && $CLICSHOPPING_Customer->isLoggedOn()) {
 
         $content_width = (int)MODULE_CHECKOUT_CONFIRMATION_INFORMATION_CONTENT_WIDTH;
         $confirmation_process_order_banner = '';
 
-        if ($CLICSHOPPING_Service->isStarted('Banner') ) {
+        if ($CLICSHOPPING_Service->isStarted('Banner')) {
           if ($banner = $CLICSHOPPING_Banner->bannerExists('dynamic',  MODULE_CHECKOUT_CONFIRMATION_INFORMATION_BANNER_GROUP)) {
             $confirmation_process_order_banner = $CLICSHOPPING_Banner->displayBanner('static', $banner) . '<br /><br />';
           }
         }
 
-        $confirmation = '  <!-- processing_confirmation_information -->'. "\n";
+        $confirmation = '  <!-- processing_confirmation_information -->' . "\n";
 
         ob_start();
         require_once($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/checkout_confirmation_information'));

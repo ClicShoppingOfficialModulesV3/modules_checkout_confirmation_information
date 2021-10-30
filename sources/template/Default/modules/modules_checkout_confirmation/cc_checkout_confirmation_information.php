@@ -13,10 +13,10 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class cc_checkout_confirmation_information {
-    public $code;
+    public string $code;
     public $group;
-    public string $title;
-    public string $description;
+    public $title;
+    public $description;
     public ?int $sort_order = 0;
     public bool $enabled = false;
 
@@ -40,7 +40,7 @@
       $CLICSHOPPING_Service = Registry::get('Service');
       $CLICSHOPPING_Banner = Registry::get('Banner');
 
-      if (isset($_GET['Checkout']) && isset($_GET['Confirmation']) && $CLICSHOPPING_Customer->isLoggedOn()) {
+      if (isset($_GET['Checkout'], $_GET['Confirmation']) && $CLICSHOPPING_Customer->isLoggedOn()) {
 
         $content_width = (int)MODULE_CHECKOUT_CONFIRMATION_INFORMATION_CONTENT_WIDTH;
         $confirmation_process_order_banner = '';
